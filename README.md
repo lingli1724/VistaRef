@@ -129,10 +129,17 @@ The main dependencies validated in our local environment:
 
 ### 1. Prepare data and model weights
 
-Download pretrained weights:
-- BEiT-3 base/large checkpoint from [UNILM](https://github.com/microsoft/unilm/tree/master/beit3)
-- MRefM pretrained checkpoint (for two-stage finetuning)
-- BEiT-3 sentencepiece model (`beit3.spm`)
+Download pretrained weights from [OneRef HuggingFace](https://huggingface.co/linhuixiao/OneRef):
+
+| Weight | Description | Link |
+|---|---|---|
+| `beit3.spm` | Sentencepiece tokenizer | [Download](https://huggingface.co/linhuixiao/OneRef/resolve/main/beit3_checkpoints/beit3.spm) |
+| BEiT-3 Base | Original BEiT-3 base checkpoint | [Download](https://huggingface.co/linhuixiao/OneRef/resolve/main/beit3_checkpoints/beit3_base_indomain_patch16_224.pth) |
+| BEiT-3 Large | Original BEiT-3 large checkpoint | [Download](https://huggingface.co/linhuixiao/OneRef/resolve/main/beit3_checkpoints/beit3_large_indomain_patch16_224.pth) |
+| MRefM Base (REC) | MRefM pretrained base for REC | [Download](https://huggingface.co/linhuixiao/OneRef/resolve/main/mrefm_pretrain_patch16_384/rec_mrefm_pretrain_base_patch16_384.pth) |
+| MRefM Large (REC) | MRefM pretrained large for REC | [Download](https://huggingface.co/linhuixiao/OneRef/resolve/main/mrefm_pretrain_patch16_384/rec_mrefm_pretrain_large_patch16_384.pth) |
+
+You can also download the original BEiT-3 checkpoints from the [official UNILM repo](https://github.com/microsoft/unilm/tree/master/beit3).
 
 Place preprocessed datasets under `ref_data_shuffled/` or configure custom paths.
 
